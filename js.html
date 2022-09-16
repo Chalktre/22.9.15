@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box {
+				/* position: relative; */
+				margin: 0 auto;
+				width: 300px;
+				height: 300px;
+				background-color: pink;
+			}
+
+			.cover {
+				/* display: none; */
+				position: fixed;
+				width: 100px;
+				height: 100px;
+				background: orange;
+				opacity: 0.3;
+				transform: translate(-50%, -50%);
+				/* overflow: hidden; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		</div>
+		<div class="cover"></div>
+
+
+		<script>
+			var box = document.querySelector('.box')
+			var cover = document.querySelector('.cover')
+
+			box.addEventListener('mousemove', function(e){
+				// cover.style.display = 'block'
+				var x = e.pageX 
+				var y = e.pageY
+				console.log(x,y);
+				cover.style.left = x + 'px'; 
+				cover.style.top = y + 'px'; 
+				// if (e.pageX < cover.offsetLeft){
+				// 	cover.style.display = 'none'
+
+				// }
+			})
+
+		</script>
+	</body>
+</html>
